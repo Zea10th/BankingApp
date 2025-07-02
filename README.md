@@ -17,10 +17,9 @@ A simple Java CLI application for basic banking operations: withdrawals, deposit
 2. Make Deposit
 3. Check Balance
 4. Exit
-   Enter choice: 2
-   Enter deposit amount: 200
-   Deposited 200.0
-
-Enter choice: 3
-Current balance: 1200.0
+   Enter choice: 1
+   Enter withdrawal amount: 100
+   Attempt to make a withdrawal...
+   Successfully made a withdrawal.
+   Available: 100.00
 ```

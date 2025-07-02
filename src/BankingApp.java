@@ -33,7 +33,10 @@ public class BankingApp {
                     double amount = scanner.nextDouble();
                     makeDeposit(client, amount);
                 }
-                case 3 -> checkBalance(client);
+                case 3 -> {
+                    System.out.println("Check the balance...");
+                    checkBalance(client);
+                }
                 case 4 -> {
                     System.out.println("Goodbye!");
                     return;
@@ -51,7 +54,7 @@ public class BankingApp {
 
         System.out.println("Attempt to make a withdrawal...");
         try {
-            client.account().withdraw(1300);
+            client.account().withdraw(amount);
             System.out.println("Successfully made a withdrawal.");
             checkBalance(client);
         } catch (RuntimeException e) {
@@ -72,7 +75,6 @@ public class BankingApp {
     }
 
     private static void checkBalance(Client client) {
-        System.out.println("Check the balance...");
         client.account().printBalance();
     }
 }
